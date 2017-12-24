@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["core","Allow all the core poker functionality to be used externally. Everything in core should be agnostic to poker style. This is the core module. It exports the non-holdem related code."],["holdem","The holdem specific code. This contains range parsing, game state, and starting hand code."]]});

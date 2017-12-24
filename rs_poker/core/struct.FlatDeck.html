@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `FlatDeck` struct in crate `rs_poker`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, FlatDeck">
+
+    <title>rs_poker::core::FlatDeck - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct FlatDeck</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>rs_poker</a>::<wbr><a href='index.html'>core</a></p><script>window.sidebarCurrent = {name: 'FlatDeck', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rs_poker</a>::<wbr><a href='index.html'>core</a>::<wbr><a class="struct" href=''>FlatDeck</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#12-15' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct FlatDeck { /* fields omitted */ }</pre><div class='docblock'><p><code>FlatDeck</code> is a deck of cards that allows easy
+indexing into the cards. It does not provide
+contains methods.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../rs_poker/core/struct.FlatDeck.html" title="struct rs_poker::core::FlatDeck">FlatDeck</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#17-50' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.len' class="method"><span id='len.v' class='invisible'><code>pub fn <a href='#method.len' class='fnname'>len</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#19-21' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>How many cards are there in the deck ?</p>
+</div><h4 id='method.is_empty' class="method"><span id='is_empty.v' class='invisible'><code>pub fn <a href='#method.is_empty' class='fnname'>is_empty</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#25-27' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Have all cards been dealt ?
+This probably won&#39;t be used as it&#39;s unlikely
+that someone will deal all 52 cards from a deck.</p>
+</div><h4 id='method.sample' class="method"><span id='sample.v' class='invisible'><code>pub fn <a href='#method.sample' class='fnname'>sample</a>(&amp;self, n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#30-36' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Give a random sample of the cards still left in the deck</p>
+</div><h4 id='method.shuffle' class="method"><span id='shuffle.v' class='invisible'><code>pub fn <a href='#method.shuffle' class='fnname'>shuffle</a>(&amp;mut self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#40-43' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Randomly shuffle the flat deck.
+This will ensure the there&#39;s no order to the deck.</p>
+</div><h4 id='method.deal' class="method"><span id='deal.v' class='invisible'><code>pub fn <a href='#method.deal' class='fnname'>deal</a>(&amp;mut self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#47-49' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Deal a card if there is one there to deal.
+None if the deck is empty</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-IntoIterator' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html" title="trait core::iter::traits::IntoIterator">IntoIterator</a> for &amp;'a <a class="struct" href="../../rs_poker/core/struct.FlatDeck.html" title="struct rs_poker::core::FlatDeck">FlatDeck</a></code><a href='#impl-IntoIterator' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/card_iter.rs.html#91-98' title='goto source code'>[src]</a></span></h3>
+<div class='docblock'><p>This is useful for trying every possible 5 card hand</p>
+
+<p>Probably not something that&#39;s going to be done in real
+use cases, but still not bad.</p>
+</div><div class='impl-items'><h4 id='associatedtype.Item' class="type"><span id='Item.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html#associatedtype.Item' class="type">Item</a> = <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a>&gt;</code></span></h4>
+<div class='docblock'><p>The type of the elements being iterated over.</p>
+</div><h4 id='associatedtype.IntoIter' class="type"><span id='IntoIter.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html#associatedtype.IntoIter' class="type">IntoIter</a> = <a class="struct" href="../../rs_poker/core/struct.CardIter.html" title="struct rs_poker::core::CardIter">CardIter</a>&lt;'a&gt;</code></span></h4>
+<div class='docblock'><p>Which kind of iterator are we turning this into?</p>
+</div><h4 id='method.into_iter' class="method"><span id='into_iter.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html#tymethod.into_iter' class='fnname'>into_iter</a>(self) -&gt; <a class="struct" href="../../rs_poker/core/struct.CardIter.html" title="struct rs_poker::core::CardIter">CardIter</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/card_iter.rs.html#95-97' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Creates an iterator from a value. <a href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html#tymethod.into_iter">Read more</a></p>
+</div></div><h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../../rs_poker/core/struct.FlatDeck.html" title="struct rs_poker::core::FlatDeck">FlatDeck</a></code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#11' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#11' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 id='impl-Index&lt;usize&gt;' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html" title="trait core::ops::index::Index">Index</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>&gt; for <a class="struct" href="../../rs_poker/core/struct.FlatDeck.html" title="struct rs_poker::core::FlatDeck">FlatDeck</a></code><a href='#impl-Index&lt;usize&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#52-57' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output' class="type"><span id='Output.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#associatedtype.Output' class="type">Output</a> = <a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a></code></span></h4>
+<div class='docblock'><p>The returned type after indexing.</p>
+</div><h4 id='method.index' class="method"><span id='index.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#tymethod.index' class='fnname'>index</a>(&amp;self, index: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>) -&gt; &amp;<a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#54-56' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the indexing (<code>container[index]</code>) operation.</p>
+</div></div><h3 id='impl-Index&lt;Range&lt;usize&gt;&gt;' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html" title="trait core::ops::index::Index">Index</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/core/ops/range/struct.Range.html" title="struct core::ops::range::Range">Range</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>&gt;&gt; for <a class="struct" href="../../rs_poker/core/struct.FlatDeck.html" title="struct rs_poker::core::FlatDeck">FlatDeck</a></code><a href='#impl-Index&lt;Range&lt;usize&gt;&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#58-63' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-1' class="type"><span id='Output.t-1' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#associatedtype.Output' class="type">Output</a> = <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code></span></h4>
+<div class='docblock'><p>The returned type after indexing.</p>
+</div><h4 id='method.index-1' class="method"><span id='index.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#tymethod.index' class='fnname'>index</a>(&amp;self, index: <a class="struct" href="https://doc.rust-lang.org/nightly/core/ops/range/struct.Range.html" title="struct core::ops::range::Range">Range</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>&gt;) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#60-62' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the indexing (<code>container[index]</code>) operation.</p>
+</div></div><h3 id='impl-Index&lt;RangeTo&lt;usize&gt;&gt;' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html" title="trait core::ops::index::Index">Index</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/core/ops/range/struct.RangeTo.html" title="struct core::ops::range::RangeTo">RangeTo</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>&gt;&gt; for <a class="struct" href="../../rs_poker/core/struct.FlatDeck.html" title="struct rs_poker::core::FlatDeck">FlatDeck</a></code><a href='#impl-Index&lt;RangeTo&lt;usize&gt;&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#64-69' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-2' class="type"><span id='Output.t-2' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#associatedtype.Output' class="type">Output</a> = <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code></span></h4>
+<div class='docblock'><p>The returned type after indexing.</p>
+</div><h4 id='method.index-2' class="method"><span id='index.v-2' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#tymethod.index' class='fnname'>index</a>(&amp;self, index: <a class="struct" href="https://doc.rust-lang.org/nightly/core/ops/range/struct.RangeTo.html" title="struct core::ops::range::RangeTo">RangeTo</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>&gt;) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#66-68' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the indexing (<code>container[index]</code>) operation.</p>
+</div></div><h3 id='impl-Index&lt;RangeFrom&lt;usize&gt;&gt;' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html" title="trait core::ops::index::Index">Index</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/core/ops/range/struct.RangeFrom.html" title="struct core::ops::range::RangeFrom">RangeFrom</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>&gt;&gt; for <a class="struct" href="../../rs_poker/core/struct.FlatDeck.html" title="struct rs_poker::core::FlatDeck">FlatDeck</a></code><a href='#impl-Index&lt;RangeFrom&lt;usize&gt;&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#70-75' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-3' class="type"><span id='Output.t-3' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#associatedtype.Output' class="type">Output</a> = <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code></span></h4>
+<div class='docblock'><p>The returned type after indexing.</p>
+</div><h4 id='method.index-3' class="method"><span id='index.v-3' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#tymethod.index' class='fnname'>index</a>(&amp;self, index: <a class="struct" href="https://doc.rust-lang.org/nightly/core/ops/range/struct.RangeFrom.html" title="struct core::ops::range::RangeFrom">RangeFrom</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>&gt;) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#72-74' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the indexing (<code>container[index]</code>) operation.</p>
+</div></div><h3 id='impl-Index&lt;RangeFull&gt;' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html" title="trait core::ops::index::Index">Index</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/core/ops/range/struct.RangeFull.html" title="struct core::ops::range::RangeFull">RangeFull</a>&gt; for <a class="struct" href="../../rs_poker/core/struct.FlatDeck.html" title="struct rs_poker::core::FlatDeck">FlatDeck</a></code><a href='#impl-Index&lt;RangeFull&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#76-81' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-4' class="type"><span id='Output.t-4' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#associatedtype.Output' class="type">Output</a> = <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code></span></h4>
+<div class='docblock'><p>The returned type after indexing.</p>
+</div><h4 id='method.index-4' class="method"><span id='index.v-4' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/index/trait.Index.html#tymethod.index' class='fnname'>index</a>(&amp;self, index: <a class="struct" href="https://doc.rust-lang.org/nightly/core/ops/range/struct.RangeFull.html" title="struct core::ops::range::RangeFull">RangeFull</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="struct" href="../../rs_poker/core/struct.Card.html" title="struct rs_poker::core::Card">Card</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rs_poker/core/flat_deck.rs.html#78-80' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the indexing (<code>container[index]</code>) operation.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rs_poker";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
